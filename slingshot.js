@@ -12,6 +12,12 @@ class Sling{
         World.add(world, this.sling);
     }
 
+    attach(body){
+
+       // Matter.Body.setPosition(body, {x: 150 , y: 200});
+        this.sling.bodyA = body;
+    }
+
     fly(){
         this.sling.bodyA = null;
     }
@@ -35,10 +41,6 @@ class Sling{
         }
     }
 
-    attach(body){
-
-        Matter.Body.setPosition(bird.body, {x: 150 , y: 200});
-        this.sling.bodyA = body;
-    }
+   
     
 }
