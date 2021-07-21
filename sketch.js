@@ -187,32 +187,11 @@ function keyPressed(){
 
   if(keyCode === 32){
 
-    Matter.Body.setPosition(bird.body, {x: 150 , y: 200});
-    slingShot.attach(this.ball);
+  //  Matter.Body.setPosition(ball.body, {x: 150 , y: 200});
+    slingshot.attach(this.ball);
 
   }
 }
 
 
-display()
-{
-  console.log(this.body.speed);
-  if(this.body.speed <3)
-  {
-  var angle = this.body.angle;
-  var pos= this.body.position;
-  push();
-  translate(pos.x, pos.y);
-  rotate(angle);
-  rectMode(CENTER);
-  rect(0,0,this.width, this.height);
-  pop();
-}
-else{
-  World.remove(world, this.body);
-  push();
-  this.visibility = this.visibility -5;
-  pop();
-  
-}
-}
+
